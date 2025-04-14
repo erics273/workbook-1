@@ -31,8 +31,9 @@ public class SimpleCalculator {
 
     }
 
-    public static int addNumbers(int num1, int num2){
-        return num1 + num2;
+    //separate method just to do the addition
+    public static int addNumbers(int potato1, int potato2){
+        return potato1 + potato2;
     }
 
 }
