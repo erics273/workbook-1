@@ -36,13 +36,48 @@ public class BasicCalculator {
         //captures the answer to the question above
         String userChoice = myScanner.nextLine();
 
+        System.out.println("The user chose " + userChoice);
+
+        int result = 0;
+        String operator = "";
+        if(userChoice.equals("M")){
+            operator = "*";
+            result = multiplyNumbers(firstNumber, secondNumber);
+        } else if (userChoice.equals("A")) {
+            operator = "+";
+            result = addNumbers(firstNumber, secondNumber);
+        } else if (userChoice.equals("S")) {
+            operator = "-";
+            result = subtractNumbers(firstNumber, secondNumber);
+        } else if (userChoice.equals("D")) {
+            operator = "/";
+            result = divideNumbers(firstNumber, secondNumber);
+        }
+
+
         //lets figure out the product of the two numbers multiplied together
-        int product = firstNumber * secondNumber;
+//        int product = multiplyNumbers(firstNumber, secondNumber);
 
         //print out the answer to the user.
-        System.out.println(firstNumber + " * " + secondNumber + " = " + product);
+        System.out.println(firstNumber + "  " + operator + " " + secondNumber + " = " + result);
 
 
+    }
+
+    public static int multiplyNumbers(int num1, int num2){
+        return num1 * num2;
+    }
+
+    public static int addNumbers(int num1, int num2){
+        return num1 + num2;
+    }
+
+    public static int subtractNumbers(int num1, int num2){
+        return num1 - num2;
+    }
+
+    public static int divideNumbers(int num1, int num2){
+        return num1 / num2;
     }
 
 }
