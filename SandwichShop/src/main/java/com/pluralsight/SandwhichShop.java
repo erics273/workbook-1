@@ -19,13 +19,25 @@ public class SandwhichShop {
             int sammySize = sammySizeSelection();
 
             double total = 0;
-            if(sammySize == 1){
-                total += 5.45;
-            } else if (sammySize == 2) {
-                total += 8.95;
-            }else {
-                System.out.println("\nInvalid Selection, try again!\n");
-                continue;
+//            if(sammySize == 1){
+//                total += 5.45;
+//            } else if (sammySize == 2) {
+//                total += 8.95;
+//            }else {
+//                System.out.println("\nInvalid Selection, try again!\n");
+//                continue;
+//            }
+
+            switch (sammySize){
+                case 1:
+                    total += 5.45;
+                    break;
+                case 2:
+                    total += 8.95;
+                    break;
+                default:
+                    System.out.println("\nInvalid Selection, try again!\n");
+                    continue;
             }
 
             //all worked out with the sammy size selection, lets figure out the discount
