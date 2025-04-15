@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 public class SandwhichShop {
 
+    //creating the scanner at the class level
     static Scanner theScanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
+        //this just lets us know if the app should stay running or die
         boolean appRunning = true;
 
+        //start the point of sales system
         while(appRunning == true){
 
+            //run the code that asks for the sammy size and store it in sammySize variable
             int sammySize = sammySizeSelection();
 
             double total = 0;
@@ -24,6 +28,7 @@ public class SandwhichShop {
                 continue;
             }
 
+            //all worked out with the sammy size selection, lets figure out the discount
             int discount = 0;
             try{
 
@@ -41,8 +46,23 @@ public class SandwhichShop {
                 continue;
             }
 
+            theScanner.nextLine();
 
-            total = total - (total * discount /100);
+            String isLoaded = isSammyLoaded();
+
+            double loadedUpcharge = 0;
+            if(isLoaded.equalsIgnoreCase("y")){
+
+                if(sammySize == 1){
+                    loadedUpcharge = 1.00;
+                }else if (sammySize == 2){
+                    loadedUpcharge = 1.75;
+                }
+
+            }
+
+
+            total = total - (total * discount /100) + loadedUpcharge;
 
             displayTotal(sammySize, total, discount);
 
@@ -67,6 +87,20 @@ public class SandwhichShop {
         System.out.print("What size would you like? ");
 
         int choice = theScanner.nextInt();
+
+        return choice;
+
+    }
+
+    public static String isSammyLoaded() {
+
+        //Ask the user what size sammy
+        System.out.println("Would you like your loaded");
+        System.out.println("\tRegular: $1.00 up charge");
+        System.out.println("\tLarge: $1.75 up charge");
+        System.out.print("Please say (y/n) ");
+
+        String choice = theScanner.nextLine();
 
         return choice;
 
