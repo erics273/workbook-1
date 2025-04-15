@@ -28,6 +28,12 @@ public class ConditionalsDemo {
 
         System.out.println(isOldEnoughToVote);
 
+        String fullName = "Eric Schwartz";
+
+        String[] namePieces = fullName.trim().split(" ");
+
+        System.out.println(namePieces.length);
+
     }
 
 }
