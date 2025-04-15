@@ -40,18 +40,21 @@ public class BasicCalculator {
 
         int result = 0;
         String operator = "";
-        if(userChoice.equals("M")){
+
+        if(userChoice.equalsIgnoreCase("M")){
             operator = "*";
             result = multiplyNumbers(firstNumber, secondNumber);
-        } else if (userChoice.equals("A")) {
+        } else if (userChoice.equalsIgnoreCase("A")) {
             operator = "+";
             result = addNumbers(firstNumber, secondNumber);
-        } else if (userChoice.equals("S")) {
+        } else if (userChoice.equalsIgnoreCase("S")) {
             operator = "-";
             result = subtractNumbers(firstNumber, secondNumber);
-        } else if (userChoice.equals("D")) {
+        } else if (userChoice.equalsIgnoreCase("D")) {
             operator = "/";
             result = divideNumbers(firstNumber, secondNumber);
+        }else{
+            System.out.println("Bad choice try again");
         }
 
 
