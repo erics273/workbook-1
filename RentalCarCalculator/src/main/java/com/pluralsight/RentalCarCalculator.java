@@ -75,11 +75,18 @@ public class RentalCarCalculator {
         //options cost
         //underage driver surcharge
         //total cost
+        displayTotals(basePrice, optionsCost, surcharge, total);
+
+
+    }
+
+    //method to display the totals
+    public static void displayTotals(double basePrice, double optionsCost, double surcharge, double total){
+
         System.out.printf("Base Rental Cost $%.2f%n", basePrice);
         System.out.printf("Options Cost Cost $%.2f%n", optionsCost);
         System.out.printf("Underage surcharge $%.2f%n", surcharge);
         System.out.printf("Cost $%.2f", total);
-
 
     }
 
