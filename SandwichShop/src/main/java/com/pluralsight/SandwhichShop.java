@@ -142,7 +142,6 @@ public class SandwhichShop {
 
         //Ask the user what size sammy
         System.out.print("Would you like to order another Sammy? (Y/N) ");
-        theScanner.nextLine();
         return theScanner.nextLine();
 
     }
