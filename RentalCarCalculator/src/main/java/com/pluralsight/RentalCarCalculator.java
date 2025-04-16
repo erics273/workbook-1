@@ -84,9 +84,9 @@ public class RentalCarCalculator {
     public static void displayTotals(double basePrice, double optionsCost, double surcharge, double total){
 
         System.out.printf("Base Rental Cost $%.2f%n", basePrice);
-        System.out.printf("Options Cost Cost $%.2f%n", optionsCost);
+        System.out.printf("Options Cost $%.2f%n", optionsCost);
         System.out.printf("Underage surcharge $%.2f%n", surcharge);
-        System.out.printf("Cost $%.2f", total);
+        System.out.printf("Total Cost $%.2f", total);
 
     }
 
