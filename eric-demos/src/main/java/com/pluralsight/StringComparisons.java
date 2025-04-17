@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.regex.Pattern;
+
 public class StringComparisons {
 
     public static void main(String[] args) {
@@ -93,7 +95,6 @@ public class StringComparisons {
         String input = "Dallas|Ft. Worth|Austin";
         String[] cities = input.split("\\|");
         System.out.println(cities[1]);
-
 
 
     }
