@@ -30,19 +30,19 @@ public class StringBuilderDemo {
         System.out.println(sb);
 
         //paindrome
-        String orginalWord = "racecar";
+        StringBuilder orginalWord = new StringBuilder("pizza");
         StringBuilder reversedWord = new StringBuilder(orginalWord).reverse();
 
         System.out.println();
 
-        if(orginalWord.equals(reversedWord)){
+        if(orginalWord.toString().equals(reversedWord.toString())){
             System.out.println("you found a palindrome");
         }else{
             System.out.println("THe word was not a palindrome");
         }
 
 
-        //examole of gettting input from the scanner and buiding a string with the string builder
+        //examole of gettting input from the scanner and builder
         Scanner theScanner = new Scanner(System.in);
 
         System.out.println("what is your first name?");
