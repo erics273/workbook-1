@@ -39,16 +39,20 @@ public class ReadFileTryCatch {
         }
 
         try {
+
+            String fileName = "inventory.csv";
             //create file input stream that kinda brings our file into our code
             //i put the file in the resources folder because technically thats where it should be
-            FileInputStream fis1 = new FileInputStream("src/main/resources/inventory.csv");
+            FileInputStream fis1 = new FileInputStream("src/main/resources/" + fileName);
             Scanner fileScanner1 = new Scanner(fis1);
 
             //loop that checks to make sure we have a line or next lines in our file
             //prints the lines out if they exist
+            int lineNumber = 1;
             while(fileScanner1.hasNextLine()) {
                 //print out each line in the file
-                System.out.println( fileScanner1.nextLine() );
+                System.out.println(lineNumber + ": " + fileScanner1.nextLine() );
+                lineNumber++;
             }
 
         }catch (Exception e){
