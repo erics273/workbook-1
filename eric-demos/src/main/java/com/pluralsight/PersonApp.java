@@ -3,6 +3,17 @@ package com.pluralsight;
 public class PersonApp {
 
     public static void main(String[] args) {
+
+        Person bill = new Person("bill", "theman", "123-45-6789", 99);
+        System.out.println(bill.getFullName());
+
+        Person billiam = new Person();
+        billiam.setLastName("thelastnameofbilliam");
+        billiam.setFirstName("billiam");
+        System.out.println(billiam.getFullName());
+
+        System.exit(0);
+
         //let's use our person class to create a person
         Person eric = new Person("Eric", "Schwartz", "111-11-1111", 43);
 

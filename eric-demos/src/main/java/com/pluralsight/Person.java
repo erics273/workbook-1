@@ -9,6 +9,9 @@ public class Person {
     private int age;
     private int health;
 
+    public Person() {
+    }
+
     public Person(String firstName, String lastName, String ssn, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -71,5 +74,10 @@ public class Person {
 
     public void setHealth(int health) {
         this.health = health;
+    }
+
+
+    public String getFullName(){
+        return this.firstName + " " + this.lastName;
     }
 }
