@@ -8,6 +8,7 @@ public class Person {
     private String ssn;
     private int age;
     private int health;
+    static String nationality = "awesome-ish";
 
     public Person() {
     }
@@ -79,5 +80,9 @@ public class Person {
 
     public String getFullName(){
         return this.firstName + " " + this.lastName;
+    }
+
+    static String getNationality(){
+        return nationality;
     }
 }
