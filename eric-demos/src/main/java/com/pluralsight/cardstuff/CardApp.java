@@ -6,6 +6,8 @@ public class CardApp {
 
         //create the deck
         Deck deck = new Deck();
+        //shuffle the deck
+        deck.shuffle();
         //create the hand
         Hand hand1 = new Hand();
 
